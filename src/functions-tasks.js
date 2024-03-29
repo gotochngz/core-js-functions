@@ -32,8 +32,8 @@ function getCurrentFunctionName() {
  *   getFunctionBody(hiHello) => "function hiHello() { console.log('hello world'); }"
  *
  */
-function getFunctionBody(func) {
-  // throw new Error('Not implemented');
+function getFunctionBody(/* func */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -78,6 +78,10 @@ function getArgumentsCount(funcs) {
  */
 function getPowerFunction(/* exponent */) {
   throw new Error('Not implemented');
+  // function power(num) {
+  //   return num;
+  // }
+  // return num ** exponent;
 }
 
 /**
