@@ -34,6 +34,9 @@ function getCurrentFunctionName() {
  */
 function getFunctionBody(/* func */) {
   throw new Error('Not implemented');
+  // return Object.getPrototypeOf(func);
+  // const res = func;
+  // return arguments[0];
 }
 
 /**
@@ -76,12 +79,10 @@ function getArgumentsCount(funcs) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
-  // function power(num) {
-  //   return num;
-  // }
-  // return num ** exponent;
+function getPowerFunction(exponent) {
+  return function pow(exp) {
+    return exp ** exponent;
+  };
 }
 
 /**
