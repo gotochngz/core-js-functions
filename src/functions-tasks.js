@@ -100,6 +100,11 @@ function getPowerFunction(exponent) {
  */
 function getPolynom() {
   throw new Error('Not implemented');
+  // if (arguments.length === 0) {
+  //   return null;
+  // } else {
+
+  // }
 }
 
 /**
@@ -116,8 +121,17 @@ function getPolynom() {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
-function memoize(/* func */) {
-  throw new Error('Not implemented');
+function memoize(func) {
+  // throw new Error('Not implemented');
+  const res = {};
+  return function rand(num) {
+    if (num in res) {
+      return res[num];
+    }
+    const result = func();
+    res[num] = result;
+    return result;
+  };
 }
 
 /**
